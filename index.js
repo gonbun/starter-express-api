@@ -15,6 +15,7 @@ const options = {
 app.use(
   session({
     store: new CyclicSessionStore(options),
+    secret: process.env.SECRET_SAULT, 
     })
 );
 
