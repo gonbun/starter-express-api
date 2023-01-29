@@ -21,13 +21,13 @@ app.use(
 
 
 app.all('/', (req, res) => {
-  console.log(req.session.count)
+  console.log(req.session)
   console.log("Just got a request!")
   if(!req.session.count){
     req.session.count=0
   }
   req.session.count +=1
-  console.log(req.session.count)
+  console.log(req.session)
   res.send('Yo!')
 })
 app.listen(process.env.PORT || 3000)
